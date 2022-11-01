@@ -1,4 +1,3 @@
-*.mustache linguist-detectable=true
+*.Mustache linguist-detectable=true
 *.html linguist-detectable=false
 *.css linguist-detectable=false
-출처: https://ndb796.tistory.com/424 [안경잡이개발자:티스토리]
