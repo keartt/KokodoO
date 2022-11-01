@@ -1,0 +1,41 @@
+{{>layouts/header}} <!-- 게시판 내용 /articles/{id} -->
+
+<table class="table">
+    <thead>
+    <th width =  "1400px"> 일본 여행기 </th>
+    <th scope="col">ID </th>
+    <th> Kim </th>
+
+    </thead>
+    <tbody>
+    <tr>
+        <td  rowspan = "2">
+            저는 김치찌개를 좋아한답니당~ <br>
+
+            <div class="card" style="width: 50rem;">
+                <img src="/images/p-six.jpeg"  class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">여기는 풍경이 정말 좋죵?.</p>
+                </div>
+            </div>
+
+
+            저런 풍경에서 맥주 한잔 캬~ <br>
+            ㅎㅎ <br>
+            d
+            d
+        </td>
+        <td><button type="button" class="btn btn-primary" disabled> 수정 </button></td>
+        <td><button type="button" class="btn btn-danger" disabled> 삭제 </button></td>
+    </tr>
+    <tr>
+        <td colspan="2"><a href="/articles/new" class="btn btn-primary">내 계획 공유</a>  </td>
+    </tr>
+    </tbody>
+
+
+</table>
+
+
+
+{{>layouts/footer}}
