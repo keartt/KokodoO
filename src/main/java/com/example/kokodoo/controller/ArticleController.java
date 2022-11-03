@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
+
 @Controller
 public class ArticleController {
     @Autowired // 스프링 부트가 미리 생성해놓은 객체를 자동 연결
