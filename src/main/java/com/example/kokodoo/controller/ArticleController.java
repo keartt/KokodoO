@@ -8,13 +8,10 @@ import com.example.kokodoo.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
-
 
 @Controller
 public class ArticleController {
@@ -117,12 +114,12 @@ public class ArticleController {
 
     // 여행 계획 미리 만들어논 게시판 들 _ 사이트 기본 제공 계획들
     @GetMapping("/articles/example/kim")
-    public String kim(){return "/articles/example/kim";}
+    public String kim(){return "articles/example/kim";}
     @GetMapping("/articles/example/park")
-    public String park(){return "/articles/example/park";}
+    public String park(){return "articles/example/park";}
     @GetMapping("/articles/example/jung")
-    public String jung(){return "/articles/example/jung";}
+    public String jung(){return "articles/example/jung";}
     @GetMapping("/articles/example/hwan")
-    public String hwan(){return "/articles/example/hwan";}
+    public String hwan(){return "articles/example/hwan";}
 
 }
