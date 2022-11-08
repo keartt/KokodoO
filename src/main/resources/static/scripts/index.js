@@ -2,7 +2,7 @@ class Travel {
   constructor () {
     this.setup ();
     this.setEvent ();
-    this.saveEvent ();
+    //this.saveEvent ();
   }
   setup () {}
   setEvent () {}
@@ -59,10 +59,16 @@ class Category extends Travel {
         item.checked = false;
         return false;
       }
+
+
+
       this.addItem (item, idx);
     } else {
       this.removeItem (item, idx);
     }
+
+
+
   }
 
   addItem (input) {
@@ -97,7 +103,7 @@ class Category extends Travel {
         'beforeEnd',
         `<li>${foodObj.title}</li>`
       );
-      //   console.log ('food', this.arrFood, title);
+        // console.log ('food', this.arrFood, title);
     } else {
       placeObj.src = src;
       placeObj.title = title;
@@ -166,10 +172,12 @@ class Category extends Travel {
     this.clickBool = true;
   }
 
+/* 제이쿼리 임포트 해서, 해당 이벤트 방식 취소
   saveEvent () {
     this.btnSave.addEventListener ('click', e => {
       e.preventDefault ();
       this.saveCheck ();
+
     });
   }
 
@@ -189,21 +197,17 @@ class Category extends Travel {
       this.popHanler ();
     }
   }
+*/
 
-  popHanler () {
-    this.popClose.addEventListener ('click', () => {
-      console.log ('popHanler');
-      this.popupWrap.classList.remove ('active');
-    });
-  }
+  <!--	팝업 기능 사용하려 했으나 팝업 사용 시 알고리즘 구현 어려움으로 새로운 페이지로 링크 방식 채택 -->
+  // popHanler () {
+  //   this.popClose.addEventListener ('click', () => {
+  //     console.log ('popHanler');
+  //     this.popupWrap.classList.remove ('active');
+  //   });
+  // }
 
-  saveStorage () {
-    console.log ('saveStorage');
-    // localStorage.setItem(
-    //     "TravelData",
-    //     JSON.stringify({ food: this.arrFood, place: this.arrPlace })
-    // );
-  }
+
 }
 
 const category = new Category ();

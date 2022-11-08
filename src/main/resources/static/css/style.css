@@ -332,11 +332,11 @@ h2 span {
 }
 
 .popupWrap .popupContent .inner .btnSet {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
+	 width: 100%;
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+ }
 
 .popupWrap .popupContent .inner .btnSet a {
 	display: inline-flex;
@@ -344,26 +344,6 @@ h2 span {
 	align-items: center;
 	padding: 0.5em 1em;
 	border-radius: 5px;
-	background-color: #2bba72;
-	color: #fff;
-	font-size: 14px;
-}
-
-.popupWrap .popupContent .inner .btnSet .prev {
-	flex: 2;
-}
-.popupWrap .popupContent .inner .btnSet .prev a {
-	background-color: #333;
-}
-
-.popupWrap .popupContent .inner .btnSet ul {
-	flex: 1;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.popupWrap .popupContent .inner .btnSet ul li a {
 	background-color: #2bba72;
 	color: #fff;
 	font-size: 14px;

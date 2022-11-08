@@ -1,0 +1,123 @@
+
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+.planList ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.planList ul li {
+    position: relative;
+    width: 20%;
+}
+.planList ul li span {
+    display: inline-block;
+    color: #ddd;
+    font-size: 30px;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-20%);
+}
+
+.planList ul li dl dt {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.planList ul li dl dd img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+.description {
+    margin: 50px 0;
+    background-color: #e1e1e1;
+    border-radius: 10px;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.description strong {
+    color: #09c;
+    display: inline-block;
+}
+
+
+.btnSet .prev {
+    flex: 2;
+}
+.btnSet .prev a {
+    background-color: #333;
+}
+
+.btnSet ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnSet ul li a {
+    background-color: #2bba72;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btnSet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnSet a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background-color: #2bba72;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btnSet .prev {
+    flex: 2;
+}
+.btnSet .prev a {
+    background-color: #333;
+}
+
+.btnSet ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnSet ul li a {
+    background-color: #2bba72;
+    color: #fff;
+    font-size: 14px;
+}

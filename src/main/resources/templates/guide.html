@@ -16,8 +16,8 @@
 
 	<link rel="stylesheet" href="./css/style.css" />
 
-	<!-- 이미지 캡쳐 시 필요한 라이브러리 -->
-	<script src="./scripts/html2canvas.min.js"></script>
+
+	</script>
 
 </head>
 
@@ -44,7 +44,7 @@
 	<!-- 공통 헤더 -->
 
 		<!-- 중앙컨텐츠 시작 -->
-		<main class="container" id="mainContents">
+		<form class="container" action="/plan" method="post" id="mainContents" >
 			<!-- 사진 선택 -->
 			<section class="content">
 				<!-- 음식별 -->
@@ -52,13 +52,12 @@
 					<div class="list">
 						<h2>
 							음식별
-							<span>(음식을 2개선택해주세요! 최대 2개까지만
-								선택가능)</span>
+							<span>(음식을 2개선택해주세요!)</span>
 						</h2>
 						<ul>
 							<li>
 								<a href="#" class="food">
-									<input type="checkbox" name="food_01" id="food_01" data-posX="33.590594"
+									<input type="checkbox" name="food" id="food_01" value="1" data-posX="33.590594"
 										data-posY="130.408332" />
 									<label for="food_01">
 										<div class="photo">
@@ -78,7 +77,7 @@
 							</li>
 							<li>
 								<a href="#" class="food">
-									<input type="checkbox" name="food_02" id="food_02" data-posX="33.591051"
+									<input type="checkbox" name="food" id="food_02" value="2" data-posX="33.591051"
 										data-posY="130.381112" />
 									<label for="food_02">
 										<div class="photo">
@@ -97,7 +96,7 @@
 							</li>
 							<li>
 								<a href="#" class="food">
-									<input type="checkbox" name="food_03" id="food_03" data-posX="34.668443"
+									<input type="checkbox" name="food" id="food_03" value="3" data-posX="34.668443"
 										data-posY="135.50344" />
 
 									<label for="food_03">
@@ -117,7 +116,7 @@
 							</li>
 							<li>
 								<a href="#" class="food">
-									<input type="checkbox" name="food_04" id="food_04" data-posX="34.648261"
+									<input type="checkbox" name="food" id="food_04" value="4" data-posX="34.648261"
 										data-posY="135.502002" />
 									<label for="food_04">
 										<div class="photo">
@@ -137,7 +136,7 @@
 							</li>
 							<li>
 								<a href="#" class="food">
-									<input type="checkbox" name="food_05" id="food_05" data-posX="35.666224"
+									<input type="checkbox" name="food" id="food_05" value="5" data-posX="35.666224"
 										data-posY="139.770776" />
 									<label for="food_05">
 										<div class="photo">
@@ -163,16 +162,15 @@
 					<div class="list">
 						<h2>
 							장소별
-							<span>(장소와 테마를 2개 이상 선택하세요! 최대
-								4개까지 선택가능)
+							<span>(장소와 테마를 4개 선택하세요!)
 							</span>
 						</h2>
 						<ul>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_01" id="place_01" data-posX="33.586631"
+									<input type="checkbox" name="place" id="place_1" value="1" data-posX="33.586631"
 										data-posY="130.376192" />
-									<label for="place_01">
+									<label for="place_1">
 										<div class="photo">
 											<img src="./images/B1.jpg" alt="" />
 										</div>
@@ -190,9 +188,9 @@
 							</li>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_02" id="place_02" data-posX="33.594536"
+									<input type="checkbox" name="place" id="place_2" value="2" data-posX="33.594536"
 										data-posY="130.351329" />
-									<label for="place_02">
+									<label for="place_2">
 										<div class="photo">
 											<img src="./images/B2.jpg" alt="" />
 										</div>
@@ -210,9 +208,9 @@
 							</li>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_03" id="place_03" data-posX="33.604006"
+									<input type="checkbox" name="place" id="place_3" value="3" data-posX="33.604006"
 										data-posY="130.397989" />
-									<label for="place_03">
+									<label for="place_3">
 										<div class="photo">
 											<img src="./images/B3.jpg" alt="" />
 										</div>
@@ -229,9 +227,9 @@
 							</li>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_04" id="place_04" data-posX="33.593785"
+									<input type="checkbox" name="place" id="place_4" value="4" data-posX="33.593785"
 										data-posY="130.408531" />
-									<label for="place_04">
+									<label for="place_4">
 										<div class="photo">
 											<img src="./images/B4.jpg" alt="" />
 										</div>
@@ -251,9 +249,9 @@
 							</li>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_05" id="place_05" data-posX="34.668708"
+									<input type="checkbox" name="place" id="place_5" value="5" data-posX="34.668708"
 										data-posY="135.503158" />
-									<label for="place_05">
+									<label for="place_5">
 										<div class="photo">
 											<img src="./images/B5.jpg" alt="" />
 										</div>
@@ -274,13 +272,15 @@
 
 					<!-- 테마별 -->
 					<div class="list">
-						<h2>테마별</h2>
+						<h2>테마별
+							<span>(장소와 테마를 4개 선택하세요!)
+							</span></h2>
 						<ul>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_06" id="place_06" data-posX="34.665627"
+									<input type="checkbox" name="place" id="place_6"value="6" data-posX="34.665627"
 										data-posY="135.432434" />
-									<label for="place_06">
+									<label for="place_6">
 										<div class="photo">
 											<img src="./images/B6.jpg" alt="" />
 										</div>
@@ -297,9 +297,9 @@
 							</li>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_07" id="place_07" data-posX="34.687338"
+									<input type="checkbox" name="place" id="place_7" value="7" data-posX="34.687338"
 										data-posY="135.525943" />
-									<label for="place_07">
+									<label for="place_7">
 										<div class="photo">
 											<img src="./images/B7.jpg" alt="" />
 										</div>
@@ -315,9 +315,9 @@
 							</li>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_08" id="place_08" data-posX="33.589835"
+									<input type="checkbox" name="place" id="place_8" value="8" data-posX="33.589835"
 										data-posY="130.411784" />
-									<label for="place_08">
+									<label for="place_8">
 										<div class="photo">
 											<img src="./images/B8.jpg" alt="" />
 										</div>
@@ -336,9 +336,9 @@
 							</li>
 							<li>
 								<a href="#" class="place">
-									<input type="checkbox" name="place_09" id="place_09" data-posX="35.981370"
+									<input type="checkbox" name="place" id="place_9" value="9" data-posX="35.981370"
 										data-posY="139.753716" />
-									<label for="place_09">
+									<label for="place_9">
 										<div class="photo">
 											<img src="./images/B9.jpg" alt="" />
 										</div>
@@ -365,7 +365,7 @@
 				<div class="side_01">
 					<h2>여행 일수를 선택하세요!</h2>
 					<select class="form-select" aria-label=" select ">
-						<option selected="selected"> 당일치기 (긴 일정은 추가 예정) </option>
+						<option selected="selected">  _당일치기 (긴 일정은 추가 예정) </option>
 					</select>
 				</div>
 
@@ -388,27 +388,27 @@
 				<!-- 버튼 -->
 				<div class="btn_set">
 				    <a href="/guide">되돌리기</a>
-					<a href="#" class="save">계획 완성</a>
+					<a href="#" id="submitBtn">계획 완성</a>
 				</div>
 			</aside>
-		</main>
+		</form>
 
 		<footer class="footer text-center">
 			<div class="mb-5 container-fluid">
 			  <hr>
 			  <p>ⓒ Made by | shalpha_2@naver.com | <a href="https://github.com/keartt">GitHub</a></p>
 			  </div>
-		  </footer>
+		</footer>
 
 	</div>
 
-	<article class="popupWrap">
+	<article class="popupWrap" >
 		<div class="blackLayer"></div>
 		<div class="popupContent">
 			<div class="close">
 				<ion-icon name="close-circle-outline"></ion-icon>
 			</div>
-			<div class="inner">
+			<div class="inner"  id="capture_area">
 				<div class="planList">
 					<ul>
 						<li>
@@ -447,7 +447,7 @@
 					</ul>
 				</div>
 
-				<div class="description" id="capture">
+				<div class="description">
 					<strong>나카스 포장마차 거리</strong> 먹고
 					<strong>오호리 공원</strong> 갔다가
 					<strong>사누키우동 시나리</strong> 먹고
@@ -461,7 +461,9 @@
 					<ul>
 						<li><a href="/articles">같이 갈 사람 찾기</a></li>
 						<li><a href="/articles">계획 자랑하기</a></li>
-						<li><a type="button" onclick="capture_html('capture')">저장</a></li>
+						<li>
+							<a href="#" class="btn_download">저장</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -473,6 +475,11 @@
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 	<script src="./scripts/index.js"></script>
+	<!-- 이미지 캡쳐 시 필요한 라이브러리 -->
+	<script src="./scripts/html2canvas.min.js"></script>
+
+	<script src="./scripts/jquery-3.2.1.min.js"></script>
+
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -480,28 +487,26 @@
 
 	<!-- 화면캡쳐 -->
 	<script>
-		//화면캡쳐
-		function capture_html(id){
-			html2canvas(document.querySelector("#"+id)).then(canvas => {
-				capture_save(canvas.toDataURL('image/png'),"capture_img.png");
-			});
+		const capBtn = document.querySelector(".btn_download");
+
+		capBtn.addEventListener("click", () => captureSave());
+
+		function captureSave() {
+			html2canvas(document.getElementById("capture_area")).then(
+				function (canvas) {
+					var el = document.createElement("a");
+					el.href = canvas.toDataURL("image/jpeg");
+					el.download = "plan.jpg"; //다운로드 할 파일명 설정
+					el.click();
+				}
+			);
 		}
-		//개인PC에 파일저장
-		function capture_save(uri, filename){
-			// 캡쳐된 파일을 이미지 파일로 내보낸다.
-			var link = document.createElement('a');
-			if (typeof link.download === 'string') {
-				link.href = uri;
-				link.download = filename;
-				document.body.appendChild(link);
-				link.click();
-				document.body.removeChild(link);
-			} else {
-				window.open(uri);
-			}
-		}
-	</script>
+		$(document).on("click", "#submitBtn", (e) => {
+			$("#mainContents").submit();
+		});
+
+
+		</script>
 
 </body>
-
 </html>

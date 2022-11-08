@@ -41,11 +41,9 @@ public class ArticleController {
     // 게시글 생성 요청
     @PostMapping("/articles/create")
     public String createArticle(ArticleDto articleDtodto) {
-        //System.out.println(form); > 로깅으로 대체
 
         // DTO 를 Entity 로 변환
         Article article = articleDtodto.toEntity();
-        //System.out.println(article.toString());
 
         // Repository 에게 Entity 를 DB 에 저장하게
         Article saved = articleRepository.save(article);
@@ -94,7 +92,6 @@ public class ArticleController {
     //게시글 삭제
     @GetMapping("/articles/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes redirect){
-        // 모델 대신 Redirect... 변수명으로 선언_ 삭제 메시지
         //1. 삭제 대상을 가져온다.
         Article target = articleRepository.findById(id).orElse(null);
         //2. 대상을 삭제한다.
