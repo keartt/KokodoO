@@ -502,8 +502,11 @@
 			);
 		}
 		$(document).on("click", "#submitBtn", (e) => {
-			$("#mainContents").submit();
+			if ($(":checkbox[name=food]:checked").length < 2 || $(":checkbox[name=place]:checked").length < 4 ) {
+				alert("음식을 2개, 장소를 4개 선택하세요")
+			} else $("#mainContents").submit();
 		});
+
 
 
 		</script>

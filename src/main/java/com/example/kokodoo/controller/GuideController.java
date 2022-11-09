@@ -7,14 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class GuideController {
@@ -206,6 +201,7 @@ public class GuideController {
         double b4 = 0;
 
         switch (firstB) {
+            case 0: b1 = 999.1; break;      //  사용자의 B값 선택이 4개가 아닐 시 가장 큰 배열값으로 선택되도록
             case 1: b1 = (B1_A1 + B1_A2) / 2; break;
             case 2: b1 = (B2_A1 + B2_A2) / 2; break;
             case 3: b1 = (B3_A1 + B3_A2) / 2; break;
@@ -218,6 +214,7 @@ public class GuideController {
         }
 
         switch (secondB) {
+            case 0: b2 = 999.2; break;
             case 1: b2 = (B1_A1 + B1_A2) / 2; break;
             case 2: b2 = (B2_A1 + B2_A2) / 2; break;
             case 3: b2 = (B3_A1 + B3_A2) / 2; break;
@@ -230,6 +227,7 @@ public class GuideController {
         }
 
         switch (thirdB) {
+            case 0: b3 = 999.4; break;
             case 1: b3 = (B1_A1 + B1_A2) / 2; break;
             case 2: b3 = (B2_A1 + B2_A2) / 2; break;
             case 3: b3 = (B3_A1 + B3_A2) / 2; break;
@@ -242,6 +240,7 @@ public class GuideController {
         }
 
         switch (fourthB) {
+            case 0: b4 = 999.5; break;
             case 1: b4 = (B1_A1 + B1_A2) / 2; break;
             case 2: b4 = (B2_A1 + B2_A2) / 2; break;
             case 3: b4 = (B3_A1 + B3_A2) / 2; break;
@@ -279,10 +278,6 @@ public class GuideController {
             }
         }
 
-        // 반환을 위해 배열 넘버 에 1 플러스
-        minIndex += 1;
-        secondIndex += 1;
-
         LOGGER.info("minIndex = {}", minIndex);
         LOGGER.info("secondIndex = {}", secondIndex);
 
@@ -290,18 +285,19 @@ public class GuideController {
         int b1result=0;
         int b2result=0;
 
+
         //인덱스값, 즉 순서에 맞는 원래 입력된 b 넘버 반환
         switch (minIndex) {
-            case 1: b1result = firstB; break;
-            case 2: b1result = secondB; break;
-            case 3: b1result = thirdB; break;
-            case 4: b1result = fourthB; break;	}
+            case 0: b1result = firstB; break;
+            case 1: b1result = secondB; break;
+            case 2: b1result = thirdB; break;
+            case 3: b1result = fourthB; break;	}
 
         switch (secondIndex) {
-            case 1: b2result = firstB; break;
-            case 2: b2result = secondB; break;
-            case 3: b2result = thirdB; break;
-            case 4: b2result = fourthB; break;	}
+            case 0: b2result = firstB; break;
+            case 1: b2result = secondB; break;
+            case 2: b2result = thirdB; break;
+            case 3: b2result = fourthB; break;	}
 
         model.addAttribute("firstA",firstA);
         model.addAttribute("secondA",secondA);
